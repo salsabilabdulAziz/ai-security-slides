@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأمن السيبراني في عصر الذكاء الاصطناعي | التقديم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- مؤشر التقدّم -->
+  <div class="slide-counter" aria-live="polite">
+    <span id="slideCounter">1 / 10</span>
+  </div>
+
+  <!-- شريط التقدّم -->
+  <div class="progress" aria-hidden="true">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- أزرار التنقل -->
+  <button class="nav-btn prev" id="prevBtn" type="button" aria-label="السابق">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 5l-7 7 7 7"></path>
+    </svg>
+  </button>
+
+  <button class="nav-btn next" id="nextBtn" type="button" aria-label="التالي">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+
+  <!-- الشريحة 1: الغلاف -->
+  <section class="slide active" id="slide-1" data-slide="1" aria-label="الغلاف">
+    <div class="slide-inner slide-cover">
+      <span class="slide-kicker">01 · الغلاف</span>
+      <div class="cover-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2l8 3v5.2c0 5-3.4 8.8-8 10.3C7.4 15.8 4 12 4 7.2V5l8-3z"></path>
+          <path d="m9.2 11.8 2 2 3.6-3.6"></path>
+        </svg>
+      </div>
+      <h1 class="title-main">الأمن السيبراني في عصر الذكاء الاصطناعي:<br>السلاح ذو الحدين</h1>
+      <div class="cover-divider" aria-hidden="true"></div>
+      <p class="title-sub">مقاربة الأمن السيبراني المتكاملة في عصر الذكاء الاصطناعي</p>
+      <p class="presenter">المُقدِّم: <span class="presenter-name">أ. [سلسبيل عبد العزيز]</span></p>
+      <p class="cover-tagline">سباق تسلح تقني مستمر بين الإنسان والآلة</p>
+    </div>
+  </section>
+
+  <!-- الشريحة 2: المقدمة -->
+  <section class="slide" id="slide-2" data-slide="2" aria-label="الشريحة الثانية المقدمة">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 02 · المقدمة</span>
+        <h2 class="title">كيف غيّر الذكاء الاصطناعي قواعد اللعبة الرقمية؟</h2>
+        <p class="slide-lead">قبل الذكاء الاصطناعي، كانت الهجمات والدفوع محدودة بقدرة العقل البشري. اليوم، بيانات التاريخ الكافية تكفي لبناء هجوم لا يُضاهى.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8v8"></path>
+              <path d="M8 12h8"></path>
+            </svg>
+          </div>
+          <h3>اللعبة القديمة</h3>
+          <p>الهجمات تركّزت على قوالب معروفة، والدفاع كان ردوداً وقائية محدودة بمرونة بشرية محدودة.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l8 3v5.2c0 5-3.4 8.8-8 10.3C7.4 15.8 4 12 4 7.2V5l8-3z"></path>
+              <path d="m9.2 11.8 2 2 3.6-3.6"></path>
+            </svg>
+          </div>
+          <h3>اللعبة الجديدة</h3>
+          <p>الهجوم أصبح استراتيجياً مدعوماً بالذكاء الاصطناعي، والدفاع تحول إلى استباقي وتأميني متكامل.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 3: الوجه الهجومي -->
+  <section class="slide" id="slide-3" data-slide="3" aria-label="الشريحة الثالثة الوجه الهجومي">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 03 · الوجه الهجومي</span>
+        <h2 class="title">كيف يستغل المخترقون خوارزميات الذكاء الاصطناعي لتطوير هجماتهم؟</h2>
+        <p class="slide-lead">من جمع البيانات إلى التسلح الذكي: ثلاث مراحل تحوّل الفهم إلى هجوم فعلي لا يُحتمل.</p>
+      </header>
+      <div class="steps">
+        <article class="step">
+          <span class="step-num">01</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a8 8 0 0 0-8 8c0 2.5.8 4.5 2.2 6.3C7 17 12 20 12 20s5-3 6.8-6.7C19.2 15.5 20 13.5 20 11a8 8 0 0 0-8-8z"></path>
+              <path d="M12 11v8"></path>
+            </svg>
+          </div>
+          <h3>تحليل البيانات الضخمة</h3>
+          <p>جمع الثغرات والكلمات المسربة لتدريب نماذج تسليحية دقيقة قادرة على الاستفادة من كل فرصة.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">02</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 6-6 6 6 6"></path>
+              <path d="m16 6 6 6-6 6"></path>
+            </svg>
+          </div>
+          <h3>توليد هجمات مخصصة</h3>
+          <p>صياغة صيغ برمجية وهجمات تجسس موجهة لخصائص النظام المستهدف الفريدة.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">03</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+              <rect x="9" y="9" width="6" height="6"></rect>
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path>
+            </svg>
+          </div>
+          <h3>تطوير أسلحة جديدة</h3>
+          <p>برمجيات ذكية تتطور وتتكيف مع استجابات أنظمة الدفاع في الوقت الحقيقي.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 4: التصيد والتزييف -->
+  <section class="slide" id="slide-4" data-slide="4" aria-label="الشريحة الرابعة التصيد والتزييف">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 04 · التصيد والتزييف</span>
+        <h2 class="title">هجمات AI-Phishing المخصصة وتقنيات Deepfake</h2>
+        <p class="slide-lead">الإنسان لم يعد هو الهدف المباشر، بل الوكيل الذي يبدو كإنسان حقيقي في لحظة كتابة الرسالة.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg>
+          </div>
+          <h3>AI-Phishing المخصص</h3>
+          <p>الرسائل المُولَّدة بالمحادثة والسياق لتصلك لشخص بعينه عبر مسارات توثيقية فعلية.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+              <path d="M5 10a7 7 0 0 0 14 0"></path>
+              <path d="M12 17v3"></path>
+            </svg>
+          </div>
+          <h3>تقنيات Deepfake</h3>
+          <p>انتحال الهوية الصوتية والمرئية بثوانٍ معدودة، لنصّ أو مكالمة أو إفادة موثوقة.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 5: الأتمتة -->
+  <section class="slide" id="slide-5" data-slide="5" aria-label="الشريحة الخامسة أتمتة اكتشاف الثغرات">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 05 · الأتمتة</span>
+        <h2 class="title">البرمجيات الخبيثة ذاتية التطور وفحص الثغرات</h2>
+        <p class="slide-lead">الخوارزميات تتطور أسرع من قدرة الفريق البشري على اكتشاف الثغرات، فأصبحت الأتمتة الضرورية.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v18"></path>
+              <path d="M5 8h14"></path>
+              <path d="M5 16h14"></path>
+              <circle cx="12" cy="4" r="2"></circle>
+              <circle cx="12" cy="20" r="2"></circle>
+            </svg>
+          </div>
+          <h3>البرمجيات الخبيثة ذاتية التطور</h3>
+          <p>تتطور قدراتها بنفسها باستمرار، فتتجاوز استراتيجيات الدفاع الثابتة بسرعة مذهلة.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8"></circle>
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 12L20 4"></path>
+            </svg>
+          </div>
+          <h3>فحص الثغرات</h3>
+          <p>فحص مستمر أتمتته الآلات، بسرعة تفوق القدرة البشرية بكثير وتكشف الثغرات قبل أن يكتشفها أحد.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 6: الوجه الدفاعي -->
+  <section class="slide" id="slide-6" data-slide="6" aria-label="الشريحة السادسة الوجه الدفاعي">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 06 · الوجه الدفاعي</span>
+        <h2 class="title">كيف يعزز الذكاء الاصطناعي أنظمة الحماية والاستجابة السيبرانية؟</h2>
+        <p class="slide-lead">الدفاع في عصر الذكاء الاصطناعي لم يعد ردّاً على هجوم، بل استراتيجية استباقية متكاملة.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l8 3v5.2c0 5-3.4 8.8-8 10.3C7.4 15.8 4 12 4 7.2V5l8-3z"></path>
+              <path d="m9.2 11.8 2 2 3.6-3.6"></path>
+            </svg>
+          </div>
+          <h3>الوقاية الذكية</h3>
+          <p>أنظمة كشف مبكرة مبنية على تحليل سلوكي يكتشف التهديدات قبل وصولها للعمليات.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path>
+            </svg>
+          </div>
+          <h3>الاستجابة الفورية</h3>
+          <p>ردود فورية مدعومة بالذكاء الاصطناعي توقف الهجمات في مراحلها الأولى.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3>اكتشاف الأنماط</h3>
+          <p>تحليل تراكمي للسلوكيات غير الطبيعية للكشف عن مؤامرة اختراق متكاملة.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 7: اكتشاف السلوك الشاذ -->
+  <section class="slide" id="slide-7" data-slide="7" aria-label="الشريحة السابعة اكتشاف السلوك الشاذ">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 07 · اكتشاف السلوك الشاذ</span>
+        <h2 class="title">تحليل الأنماط واكتشاف محاولات الاختراق غير المعتادة في الوقت الفعلي</h2>
+        <p class="slide-lead">من نظام الحظر إلى نظام الاستباق: كيف نكتشف السلوك الشاذ قبل أن يتحول لاحقاً إلى اختراق؟</p>
+      </header>
+      <div class="bars" aria-hidden="true">
+        <span style="--h: 34%;"></span>
+        <span style="--h: 52%;"></span>
+        <span style="--h: 40%;"></span>
+        <span style="--h: 66%;"></span>
+        <span style="--h: 48%;"></span>
+        <span style="--h: 78%;"></span>
+        <span style="--h: 55%;"></span>
+        <span style="--h: 90%;"></span>
+        <span style="--h: 62%;"></span>
+        <span style="--h: 42%;"></span>
+        <span style="--h: 70%;"></span>
+        <span style="--h: 96%;"></span>
+      </div>
+      <p class="bars-caption">مستوى الأنماط غير الطبيعية المكتشفة في الوقت الفعلي</p>
+    </div>
+  </section>
+
+  <!-- الشريحة 8: التنبؤ والاستجابة -->
+  <section class="slide" id="slide-8" data-slide="8" aria-label="الشريحة الثامنة التنبؤ بالثغرات">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 08 · التنبؤ والاستجابة</span>
+        <h2 class="title">فحص الأكواد استباقيًا وعزل الأجهزة المصابة تلقائيًا خلال أجزاء من الثانية</h2>
+      </header>
+      <div class="big-number">
+        <span class="big-num">1</span>
+        <span class="big-unit">ث</span>
+      </div>
+      <p class="big-caption">زمن العزل التلقائي المتوقع بعد اكتشاف الثغرة</p>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12a9 9 0 1 1-9-9"></path>
+              <path d="M21 3v6h-6"></path>
+            </svg>
+          </div>
+          <h3>فحص استباقي</h3>
+          <p>مسح مستمر ومستمر للكود والسجلات قبل وصول أي تعديل غير مصرح به.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3>عزل تلقائي</h3>
+          <p>فصل الأجهزة عن الشبكة فوراً بعد تأكيد التمرد، دون انتظار قرار بشري.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 9: التحديات -->
+  <section class="slide" id="slide-9" data-slide="9" aria-label="الشريحة التاسعة التحديات والمخاطر">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 09 · التحديات والمخاطر</span>
+        <h2 class="title">التحديات التي تواجه سباق التسلح التقني</h2>
+        <p class="slide-lead">حتى الأتمتة تتطلب توازناً بين القوة والمرونة — وهناك ثلاثة تحديات كبرى.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3v6L4 20h16l-5-11V3"></path>
+              <path d="M9 3h6"></path>
+            </svg>
+          </div>
+          <h3>Data Poisoning</h3>
+          <p>تسمين بيانات التدريب لتجميد أنماط دفاعية... أو زرع أنماط هجومية خبيثة.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22a10 10 0 1 0-10-10c0 5 3.4 8.8 8 10.3"></path>
+              <path d="M4 4l16 16"></path>
+            </svg>
+          </div>
+          <h3>الهجمات العدائية</h3>
+          <p>الرد العدائي المستند إلى الذكاء الاصطناعي ضد دفاع متقدم... ديناميكية صعبة.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8v5"></path>
+              <path d="M12 16h.01"></path>
+            </svg>
+          </div>
+          <h3>الصندوق الأسود</h3>
+          <p>مشكلة الصندوق الأسود: صعوبة تفسير سبب قرارات النماذج وتقييمها بموضوعية.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريحة 10: الخاتمة -->
+  <section class="slide" id="slide-10" data-slide="10" aria-label="الشريحة العاشرة الخاتمة">
+    <div class="slide-inner">
+      <header class="slide-heading">
+        <span class="slide-kicker">الشريحة 10 · الخاتمة</span>
+        <h2 class="title">خلاصة العرض: سباق التسلح التقني بين البشرية والذكاء الاصطناعي</h2>
+        <p class="slide-lead">الذكاء الاصطناعي سلاح ذو حدين: الهجوم يدفع دفاعاً فعلياً، أو التعاون الإنسان-الآلة يحوّل المواجهة إلى حماية.</p>
+      </header>
+      <div class="qa-box">
+        <span class="qa-badge">Q&amp;A</span>
+        <p class="qa-text">شكر وتقدير</p>
+        <p class="qa-sub">باب الأسئلة والأجوبة</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="slides.js"></script>
+
+</body>
+</html>

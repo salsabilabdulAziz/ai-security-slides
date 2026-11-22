@@ -1,0 +1,557 @@
+/* ============================================================
+   cybersecurity-presentation — Dark Tech Theme
+   ============================================================ */
+
+:root {
+  --bg: #0b132b;
+  --bg-soft: #0e1a38;
+  --card: rgba(56, 189, 248, 0.06);
+  --border: rgba(56, 189, 248, 0.2);
+  --primary: #38bdf8;
+  --secondary: #818cf8;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --radius: 20px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  overflow: hidden;
+  direction: rtl;
+  text-align: right;
+}
+
+/* ============================================================
+   الشريحات
+   ============================================================ */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 1.5rem 6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 0s linear 200ms;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 200ms ease, visibility 0s;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(55% 45% at 50% 0%, rgba(56, 189, 248, 0.09), transparent 70%),
+    radial-gradient(40% 40% at 90% 90%, rgba(129, 140, 248, 0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.slide-inner {
+  position: relative;
+  width: min(1080px, 94vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+/* ============================================================
+   العناوين والمحتوى المشترك
+   ============================================================ */
+.slide-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.slide-kicker {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.slide-lead {
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 2;
+  max-width: 780px;
+}
+
+/* ============================================================
+   الشريحة 1: الغلاف
+   ============================================================ */
+.slide-cover {
+  gap: 1.2rem;
+}
+
+.cover-icon {
+  width: 116px;
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  color: var(--primary);
+  background: linear-gradient(150deg, rgba(56, 189, 248, 0.16), rgba(129, 140, 248, 0.12));
+  border: 1px solid var(--border);
+  box-shadow: 0 0 60px rgba(56, 189, 248, 0.18);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.title-main {
+  font-size: clamp(2.1rem, 5.6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.45;
+  background: linear-gradient(120deg, #ffffff 20%, var(--primary) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cover-divider {
+  width: 96px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.title-sub {
+  font-size: clamp(1.2rem, 2.6vw, 1.9rem);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.presenter {
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.presenter-name {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.cover-tagline {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ============================================================
+   البطاقات
+   ============================================================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.card {
+  --accent: var(--primary);
+  background: linear-gradient(165deg, rgba(56, 189, 248, 0.08), rgba(129, 140, 248, 0.05));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.35s var(--ease), border-color 0.35s, box-shadow 0.35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+}
+
+.card-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 0.98rem;
+}
+
+/* ============================================================
+   الخطوات
+   ============================================================ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.step {
+  position: relative;
+  background: linear-gradient(165deg, rgba(56, 189, 248, 0.08), rgba(129, 140, 248, 0.05));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.6rem 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  text-align: center;
+}
+
+.step-num {
+  position: absolute;
+  top: -1.3rem;
+  inset-inline-start: 1.2rem;
+  min-width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.32);
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.step p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   العدد الكبير (الشريحة 8)
+   ============================================================ */
+.big-number {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.big-num {
+  font-size: clamp(5rem, 14vw, 8.5rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.big-unit {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.big-caption {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ============================================================
+   شريط الأنماط (الشريحة 7)
+   ============================================================ */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 140px;
+  width: min(560px, 80%);
+}
+
+.bars span {
+  flex: 1;
+  height: var(--h);
+  border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(180deg, var(--primary), rgba(56, 189, 248, 0.25));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: barIn 900ms var(--ease) forwards;
+}
+
+.bars span:nth-child(even) {
+  background: linear-gradient(180deg, var(--secondary), rgba(129, 140, 248, 0.25));
+}
+
+.bars span:nth-child(8) {
+  background: linear-gradient(180deg, #f87171, rgba(248, 113, 113, 0.25));
+}
+
+.bars span:nth-child(12) {
+  background: linear-gradient(180deg, #f87171, rgba(248, 113, 113, 0.25));
+}
+
+@keyframes barIn {
+  to { transform: scaleY(1); }
+}
+
+.bars-caption {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ============================================================
+   Q&A (الشريحة 10)
+   ============================================================ */
+.qa-box {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 2rem 3rem;
+  border-radius: 24px;
+  border: 1px dashed rgba(129, 140, 248, 0.5);
+  background: rgba(129, 140, 248, 0.06);
+}
+
+.qa-badge {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.qa-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.qa-sub {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ============================================================
+   مؤشر الشريحة
+   ============================================================ */
+.slide-counter {
+  position: fixed;
+  top: 1.6rem;
+  inset-inline-start: 2rem;
+  z-index: 40;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.slide-counter span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ============================================================
+   شريط التقدّم
+   ============================================================ */
+.progress {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(340px, 42vw);
+  height: 3px;
+  background: rgba(148, 163, 184, 0.18);
+  z-index: 40;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 450ms var(--ease);
+}
+
+/* ============================================================
+   أزرار التنقل
+   ============================================================ */
+.nav-btn {
+  position: fixed;
+  bottom: 1.8rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(11, 19, 43, 0.75);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  z-index: 45;
+  transition: all 0.3s var(--ease);
+}
+
+.nav-btn:hover {
+  background: rgba(56, 189, 248, 0.18);
+  transform: scale(1.08);
+}
+
+.nav-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.nav-btn.prev {
+  inset-inline-start: 2rem;
+}
+
+.nav-btn.next {
+  inset-inline-end: 2rem;
+}
+
+/* ============================================================
+   الاستجابة للهواتف
+   ============================================================ */
+@media (max-width: 860px) {
+  .slide {
+    padding: 7rem 1.2rem 5.5rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-counter {
+    top: 1.2rem;
+    inset-inline-start: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-btn {
+    bottom: 1.4rem;
+    width: 46px;
+    height: 46px;
+  }
+
+  .nav-btn.prev { inset-inline-start: 1rem; }
+  .nav-btn.next { inset-inline-end: 1rem; }
+
+  .progress { width: min(260px, 50vw); }
+}
+
+/* ============================================================
+   الطباعة
+   ============================================================ */
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  body {
+    background: var(--bg);
+    overflow: visible;
+  }
+
+  .slide {
+    position: relative;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .slide-counter,
+  .progress,
+  .nav-btn {
+    display: none !important;
+  }
+
+  .slide::before {
+    background: transparent;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
